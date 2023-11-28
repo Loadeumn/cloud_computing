@@ -1,0 +1,128 @@
+.icon-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* LOGIN ICON */
+
+.icon-log-in {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--icons, 1));
+    width: 6px;
+    height: 16px;
+    border: 2px solid;
+    border-left: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-right: -10px
+}
+
+.icon-log-in::after,
+.icon-log-in::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+
+.icon-log-in::after {
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+    left: -8px;
+    bottom: 2px
+}
+
+.icon-log-in::before {
+    border-radius: 3px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    left: -11px;
+    bottom: 5px
+}
+
+
+/* LOGOUT ICON */
+.icon-log-out {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 6px;
+    height: 16px;
+    border: 2px solid;
+    transform: scale(var(--icons, 1));
+    border-right: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-left: -10px
+}
+
+.icon-log-out::after,
+.icon-log-out::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+
+.icon-log-out::after {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-45deg);
+    width: 8px;
+    height: 8px;
+    left: 4px;
+    bottom: 2px
+}
+
+.icon-log-out::before {
+    border-radius: 3px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    left: 5px;
+    bottom: 5px
+}
+
+
+/* USER ICON */
+.icon-user {
+    display: block;
+    transform: scale(var(--icons, 1));
+    box-sizing: border-box;
+    width: 12px;
+    height: 18px
+}
+
+.icon-user::after,
+.icon-user::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid
+}
+
+.icon-user::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 30px;
+    top: 0;
+    left: 2px
+}
+
+.icon-user::after {
+    width: 12px;
+    height: 9px;
+    border-bottom: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    top: 9px
+}

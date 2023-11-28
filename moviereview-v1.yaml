@@ -1,0 +1,166 @@
+# Frontend Deployment (mrapp)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mrapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mrapp
+  template:
+    metadata:
+      labels:
+        app: mrapp
+    spec:
+      containers:
+      - name: mrapp
+        image: loadeumn/mrapp:latest
+        ports:
+        - containerPort: 3000
+
+---
+# Frontend Service (mrapp)
+apiVersion: v1
+kind: Service
+metadata:
+  name: mrapp-service
+spec:
+  type: ClusterIP
+  selector:
+    app: mrapp
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+
+---
+# Ingress reversy proxy
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/enable-websocket: "true"
+    nginx.org/websocket-services: mrapp-service
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: localhost
+    http:
+      paths:
+      - path: /ws
+        pathType: Prefix
+        backend:
+          service:
+            name: mrapp-service
+            port:
+              number: 80
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: worker-service
+            port:
+              number: 8000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mrapp-service
+            port:
+              number: 3000
+---
+# Backend Deployment (mrworker)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mrworker-deployment
+spec:
+  replicas: 3  # Adjustable for horizontal scaling
+  selector:
+    matchLabels:
+      app: mrworker
+  template:
+    metadata:
+      labels:
+        app: mrworker
+    spec:
+      containers:
+      - name: mrworker
+        image: loadeumn/mrworker:latest
+        ports:
+        - containerPort: 8000
+
+---
+# Backend Service (mrworker)
+apiVersion: v1
+kind: Service
+metadata:
+  name: worker-service
+spec:
+  type: ClusterIP
+  selector:
+    app: mrworker
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
+
+---
+# MongoDB Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:latest
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: mongodb-data
+          mountPath: /data/db
+      volumes:
+      - name: mongodb-data
+        persistentVolumeClaim:
+          claimName: mongodb-pvc
+
+---
+# MongoDB Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    app: mongodb
+  ports:
+  - protocol: TCP
+    port: 27017
+    targetPort: 27017
+
+---
+# MongoDB Persistent Volume Claim
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongodb-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Mi

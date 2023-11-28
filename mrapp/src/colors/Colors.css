@@ -1,0 +1,244 @@
+:root {
+
+  /*Color set 1: https://colorhunt.co/palette/f6f1f1afd3e219a7ce146c94 */
+
+  /* --background-color: #F6F1F1;
+
+  --main-color: #146C94;
+
+  --navbar-text: white;
+  --navbar-logo: white;
+
+  --container: #AFD3E2;
+  --container-input: #F6F1F1;
+  --container-input-text: #146C94;
+  --container-text: #146C94;
+  --container-text-h2: #146C94;
+
+  --button-text: white;
+  --button-text-hover: black;
+  --button: #146C94;
+  --button-hover: #19A7CE;
+  --button-active: #1e8ec2;
+  --button-shadow: #3a728d6a; */
+
+
+  /* Color set 2: https://colorhunt.co/palette/e3fdfdcbf1f5a6e3e971c9ce */
+
+  /* --background-color: #E3FDFD;
+    
+    --main-color: #71C9CE;
+
+    --navbar-text: white;
+    --navbar-logo: white;
+    
+    --container: #A6E3E9;
+    --container-input: #E3FDFD;
+    --container-input-text: rgb(88, 88, 88);
+    --container-text: rgb(88, 88, 88);
+    --container-text-h2: white;
+
+    --button-text: white;
+    --button-text-hover: black;
+
+    --button: #71C9CE;
+    --button-hover: #A6E3E9;
+    --button-active: #CBF1F5;
+    --button-shadow: #54989c6a; */
+
+  /* Color set 3: https://colorhunt.co/palette/e3fdfdcbf1f5a6e3e971c9ce */
+
+  /* --background-color: #E4F9F5;
+    
+    --main-color: #11999E;
+
+    --navbar-text: white;
+    --navbar-logo: white;
+    
+    --container: #11999E;
+    --container-input: #E4F9F5;
+    --container-input-text: #11999E;
+    --container-text: white;
+    --container-text-h2: white;
+
+    --button-text: white;
+    --button-text-hover: black;
+
+    --button: #30E3CA;
+    --button-hover: #26ebd1;
+    --button-active: #16f6d8;
+    --button-shadow: #40514E6a; */
+
+
+  /* Color set 4: https://colorhunt.co/palette/e3fdfdcbf1f5a6e3e971c9ce */
+
+  /* --background-color: #d5deff;
+    
+    --main-color: #5680E9;
+
+    --navbar-text: white;
+    --navbar-logo: white;
+    
+    --container: #5AB9EA;
+    --container-input: #e7ecfc;
+    --container-input-text: #5680E9;
+    --container-text: #3968e1;
+    --container-text-h2: #4b77e6;
+
+    --button-text: white;
+    --button-text-hover: black;
+
+
+    --button: #5680E9;
+    --button-hover: #8facf6;
+    --button-active: #6f94f0;
+    --button-shadow: #40514E6a; */
+
+  /* Color set 5: https://colorhunt.co/palette/e3fdfdcbf1f5a6e3e971c9ce */
+
+  /* --background-color: white;
+    
+    --main-color: #a8d0e6;
+
+    --navbar-text: #f76c6c;
+    --navbar-logo: #f76c6c;
+    
+    --container: #a8d0e6;
+    --container-input: white;
+    --container-input-text: #f76c6c;
+    --container-text: #f76c6c;
+    --container-text-h2: #f76c6c;
+
+    --button-text: white;
+    --button-text-hover: black;
+
+    --button: #f76c6c;
+    --button-hover: #f8e9a1;
+    --button-active: #f8e9a1;
+    --button-shadow: #40514E6a; */
+
+
+  /* Color set 6: Green white black */
+
+
+  --background-color: #f3f3f3;
+
+  --main-color: #2EE59D;
+
+  --navbar-text: black;
+  --navbar-logo: #393939;
+
+  --container: #2EE59D;
+  --container-input: #f3f3f3;
+  --container-input-text: black;
+  --container-text: black;
+  --container-text-h2: #393939;
+
+  --button-text: black;
+  --button-text-hover: white;
+
+  --button: white;
+  --button-hover: #393939;
+  --button-active: #5c5c5c;
+  --button-shadow: #5c5c5c6a;
+
+  /* Color set 7: Blue white black */
+
+
+  /* --background-color: #f3f3f3;
+    
+    --main-color: #52abe7;
+
+    --navbar-text: black;
+    --navbar-logo: #2e2e2e;
+    
+    --container: #52abe7;
+    --container-input: #f3f3f3;
+    --container-input-text: black;
+    --container-text: black;
+    --container-text-h2: #2f2f2f;
+
+    --button-text: black;
+    --button-text-hover: white;
+
+    --button: white;
+    --button-hover: #393939;
+    --button-active: #5c5c5c;
+    --button-shadow: #5c5c5c6a; */
+
+  /* Color set 7: Blue white black */
+
+
+  /* --background-color: #ebeef1;
+
+  --main-color: #3b71e4;
+
+  --navbar-text: #fff;
+  --navbar-logo: #fff;
+
+  --container: white;
+  --container-input: #f3f3f3;
+  --container-input-text: #393939;
+  --container-text: #393939;
+  --container-text-h2: #393939;
+
+  --button-text: white;
+  --button-text-hover: white;
+
+  --button: #5383E8;
+  --button-hover: #393939;
+  --button-active: #5c5c5c;
+  --button-shadow: #5c5c5c6a; */
+
+  /* Red and black*/
+
+  --background-color: #15191c;
+
+  --main-color: #FF6B6B;
+
+  --navbar-text: #F5F5F5;
+  --navbar-logo: #FF6B6B;
+
+  --container: #15191c;
+  --container-input: #444444;
+  --container-input-text: #CCCCCC;
+  --container-text: #FF6B6B;
+  --container-text-h2: #FF6B6B;
+
+  --button-text: #444444;
+  --button-text-hover: #F5F5F5;
+
+  --button: #FF6B6B;
+  --button-hover: #FF4444;
+  --button-active: #D60000;
+  --button-shadow: rgba(214, 0, 0, 0.42);
+
+  /* --button: #8B0000;
+  --button-hover: #A52A2A;
+  --button-active: #640000;
+  --button-shadow: rgba(100, 0, 0, 0.42); */
+
+  /* red balck 2 */
+
+  --background-color: #15191c;
+
+  --main-color: #8B0000;
+
+  --navbar-text: #F5F5F5;
+  --navbar-logo: #E8E8E8;
+
+  --container: #15191c;
+  --container-input: #444444;
+  --container-input-text: #CCCCCC;
+  --container-text: #E8E8E8;
+  --container-text-h2: #E8E8E8;
+
+  --button-text: #F8F8FF;
+  --button-text-hover: #F5F5F5;
+
+  --button: #8B0000;
+  --button-hover: #A52A2A;
+  --button-active: #D60000;
+  --button-shadow: rgba(126, 1, 1, 0.42);
+
+}

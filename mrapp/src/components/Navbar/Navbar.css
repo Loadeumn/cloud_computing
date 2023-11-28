@@ -1,0 +1,136 @@
+/* navbar.css */
+
+.navbar {
+  background-color: var(--container);
+  color: var(--navbar-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 1rem;
+  box-shadow: 0px 8px 15px var(--button-shadow);
+  border-radius: 0.5rem;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: var(--navbar-text);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.menu-button:hover {
+  /* text-decoration: underline; */
+  transform: translateY(-0.2rem);
+  filter: invert(1);
+}
+
+.navbar-button {
+  background: none;
+  border: none;
+  color: var(--navbar-text);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  width: 5.5rem;
+  position: absolute;
+  top: 100%;
+  background-color: var(--main-color);
+  color: var(--navbar-text);
+  padding: 10px;
+  box-shadow: 0px 8px 15px var(--button-shadow);
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li a {
+  color: var(--navbar-text);
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  /* text-decoration: underline; */
+  filter: invert(1);
+}
+
+.navbar-center {
+  flex-grow: 10;
+  text-align: center;
+  font-size: 200%;
+  /*Blow code is so that even if navbar-right and -left grows the text stays in the center*/
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+}
+
+.navbar-center .logo {
+  color: var(--navbar-logo);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+  /* For smaller screens, adjust the font size */
+  .navbar-center {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* For even smaller screens, adjust the font size further */
+  .navbar-center {
+    font-size: 16px;
+  }
+}
+
+.section-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease 0s;
+}
+
+.section-container:hover {
+  transform: translateY(-0.2rem);
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 25.5vw;
+}

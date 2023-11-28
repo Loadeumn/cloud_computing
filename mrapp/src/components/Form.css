@@ -1,0 +1,104 @@
+.page-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  /* More modern border radius */
+  max-width: 19rem;
+  width: fit-content;
+  padding: 2rem;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  color: var(--container-text);
+  background-color: var(--container);
+  box-shadow: 0px 8px 15px var(--button-shadow);
+  /* Updated shadow */
+}
+
+.form-container h2 {
+  color: var(--container-text-h2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Adding text shadow for depth */
+}
+
+.form-container .inputFields {
+  margin: 0.5rem;
+  border: none;
+  min-width: 16rem;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  background-color: var(--container-input);
+  color: var(--container-input-text);
+}
+
+.form-container .textArea {
+  margin: 0.5rem;
+  border: none;
+  width: 16rem;
+  /* height: 40px; */
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  background-color: var(--container-input);
+  color: var(--container-input-text);
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none;
+}
+
+.form-container textarea {
+  resize: vertical;
+}
+
+.form-container .errorMessage,
+.form-container .successMessage {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  max-width: 14rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.form-container .errorMessage {
+  background-color: rgb(255, 120, 120);
+}
+
+.form-container .successMessage {
+  background-color: #2FDD92;
+}
+
+.BtnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.link-container {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+}
+
+.link:hover {
+  transform: translateY(-0.2rem);
+  filter: brightness(1.2);
+  /* Brighten link on hover instead of inverting */
+}
