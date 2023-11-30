@@ -35,7 +35,7 @@ spec:
       targetPort: 3000
 
 ---
-# Ingress reversy proxy
+# Ingress
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -51,13 +51,6 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /ws
-        pathType: Prefix
-        backend:
-          service:
-            name: mrapp-service
-            port:
-              number: 80
       - path: /api
         pathType: Prefix
         backend:
