@@ -22,5 +22,5 @@
 
 ## Run the following command to install the Kubernetes Cluster:
 
-    ```$ bash kuberneted_deploy.sh```
+    $ bash kuberneted_deploy.sh
 
