@@ -22,5 +22,5 @@
 
 ## Run the following command to install the Kubernetes Cluster:
 
-    ```$ bash moviereview-v1.yaml```
+    ```$ bash kuberneted_deploy.sh```
 
